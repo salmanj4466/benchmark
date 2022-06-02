@@ -103,7 +103,6 @@
 
 .icon-down:before {
   content: "\e90f";
-  color: #fff;
 }
 
 .icon-inventory:before {
@@ -231,7 +230,7 @@ header .navbar-light .nav-item.active .nav-link:hover {
   color: #F6CF63;
 }
 
-header .navbar-nav .avatar {
+.avatar {
   border-radius: 50%;
   width: 38px;
 }
@@ -351,7 +350,7 @@ header .navbar-nav .nav-item {
 
 #content-wrapper {
   width: 100%;
-  padding: 35px 30px 20px 25px;
+  padding: 35px 25px 20px 25px;
 }
 
 #wrapper.toggled #content-wrapper {
@@ -371,7 +370,9 @@ header .navbar-nav .nav-item {
 }
 
 #sidebar-toggle {
-  color: #35256c;
+  color: #fff;
+  font-size: 23px;
+  padding-top: 6px;
 }
 
 .navbar .dropdown-menu {
@@ -433,7 +434,7 @@ header .navbar-nav .nav-item {
 
 .user-dashboard .state-block .card-body h4 {
   font-weight: 500;
-  font-size: 22px;
+  font-size: 20px;
   line-height: 24px;
   margin: 25px 0;
 }
@@ -441,7 +442,7 @@ header .navbar-nav .nav-item {
 
 .user-dashboard .state-block .card-body h6 {
   font-weight: 500;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 20px;
 }
 
@@ -451,17 +452,23 @@ header .navbar-nav .nav-item {
   padding: 1px 8px;
   color: #616161;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 22px;
   margin-bottom: 8px;
 }
+
+.user-dashboard .state-block .badge.badge-primary {
+  background: #3D63E4;
+  color: #fff;
+}
+
 
 .user-dashboard .state-block .badge.badge-success {
   background: rgba(0, 218, 96, 0.1);
 }
 
-.user-dashboard .state-block .d-flex {
-  width: 163px;
+.user-dashboard .state-block .d-flex.benchmark-block {
+  width: 150px;
   margin: 0px auto;
 }
 
@@ -486,10 +493,11 @@ header .navbar-nav .nav-item {
 .fa-times {
   position: absolute;
   right: 15px;
-  font-size: 20px;
+  font-size: 24px;
   top: 15px;
-  color: #35256c;
-  -webkit-text-stroke: 2px #e9e4f9;
+  color: #7E809B;
+  -webkit-text-stroke: 2px #fff;
+  z-index: 9999;
 }
 
 .funnel-block:after {
@@ -506,7 +514,7 @@ header .navbar-nav .nav-item {
   margin-left: -85px;
 }
 
-.funnel-block .card .card-body h4 {
+.funnel-block h4 {
   font-weight: 500;
   font-size: 22px;
   line-height: 20px;
@@ -570,6 +578,55 @@ header .navbar-nav .nav-item {
   background-color: #3D63E4;
 }
 
+.state-block .table td,
+.state-block .table th {
+  border: 0;
+  text-align: center;
+
+}
+
+.state-block .table th {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 18px;
+  color: #2F4355;
+  padding: 10px 0;
+
+}
+
+.state-block .table th:first-child,
+.state-block .table td:first-child {
+  text-align: left;
+  font-weight: 400;
+
+}
+
+.state-block .table td {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #000000;
+  padding: 10px 0;
+  font-weight: 600;
+}
+
+.state-block .table td .badge {
+  font-size: 12px;
+  padding: 1px 10px;
+  font-weight: 600;
+  min-width: 50px;
+  border-radius: 7px;
+  margin-bottom: 0;
+}
+
+
+.state-block .table .badge i {
+  font-size: 6px;
+  position: relative;
+  top: -1px;
+  margin-right: 3px;
+}
+
 /* Media Query */
 
 
@@ -617,6 +674,10 @@ header .navbar-nav .nav-item {
     padding: 30px 30px 50px 30px;
   }
 
+  .user-dashboard .state-block p {
+    font-size: 11px;
+  }
+
 
 }
 
@@ -629,6 +690,22 @@ header .navbar-nav .nav-item {
     padding: 90px 30px 50px 30px;
   }
 
+  .user-dashboard .state-block .card-body h4 {
+    font-size: 18px;
+  }
+
+  .user-dashboard .state-block .card-body h3 {
+    font-size: 20px;
+
+  }
+
+  .navbar {
+    padding: 6px 20px;
+  }
+
+  .navbar-nav {
+    flex-direction: inherit;
+  }
 
 }
 
@@ -696,7 +773,123 @@ header .navbar-nav .nav-item {
     margin-right: 250px;
   }
 
+  .funnel-block h4 {
+    font-size: 20px;
+  }
 
 }
 
-@media (max-width: 576px) {}
+@media (max-width: 576px) {
+
+  .funnel-block ul {
+    padding: 3px 0 4px;
+  }
+
+
+  .funnel-block ul li h6 {
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+
+  .funnel-block ul li p {
+    font-size: 11px;
+    line-height: 16px;
+  }
+
+  .funnel-block:after {
+    height: 537px;
+    width: 140px;
+    top: -8px;
+    left: 50%;
+    margin-left: -65px;
+  }
+
+  .funnel-block ul li img {
+    width: 13px;
+  }
+
+  .navbar {
+    background: transparent !important;
+    box-shadow: none;
+  }
+
+  .menu-mb {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .menu-mb img {
+    width: 200px;
+  }
+
+  header .navbar {
+    display: block;
+    position: relative;
+    padding: 20px 15px 10px;
+  }
+
+  .filter-btn {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+
+  #content-wrapper {
+    padding: 20px 20px 20px 20px;
+  }
+
+  .btn-danger {
+    background: #ffffff !important;
+    color: #2F4355;
+    border: 1px solid #ffffff !important;
+    border-radius: 6px;
+  }
+
+  .avatar {
+    width: 22px;
+    margin-right: 3px;
+  }
+
+  .sidebar-nav {
+    top: 0;
+  }
+
+  .sidebar-nav>li {
+    padding: 10px 20px;
+  }
+
+  .sidebar-nav>li {
+    padding: 10px 15px;
+  }
+
+  .number {
+    line-height: 65px !important;
+    font-size: 50px !important;
+    color: #3D63E4 !important;
+  }
+
+  .user-dashboard .state-block .card-body h4 {
+    margin-bottom: 0;
+    margin-top: 10px;
+  }
+
+  .user-dashboard .state-block .icon-arrow-down {
+
+    font-size: 34px;
+    position: absolute;
+    left: 36px;
+    margin-top: -51px;
+  }
+
+  .user-dashboard .state-block .badge.badge-danger {
+    background: transparent !important;
+    color: #FF0000;
+  }
+
+  .user-dashboard .state-block .d-flex .dashed-line {
+    width: 69%;
+  }
+
+}

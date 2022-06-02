@@ -16,9 +16,16 @@
    <body>
       <header>
          <nav class="navbar navbar-expand-lg navbar-light">
-            <a href="javascript:void(0)" class="btn btn-danger mr-3"><i class="icon-filter"></i> Last 7 Days</a>  
-            <a href="javascript:void(0)" class="btn btn-danger"><i class="icon-down"></i> Report</a>  
-            <!-- <a href="javascript:void(0)" class="ml-3" id="sidebar-toggle"><i class="fa fa-bars"></i> Menu</a> -->
+            <div class="menu-mb">
+               <a href="javascript:void(0)" class="d-lg-none mx-2 mx-md-3" id="sidebar-toggle"><i class="icon-menu"></i></a>
+               <a href="javascript:void(0)">
+               <img class="logo d-sm-none" src="assets/images/logo.png" alt="logo"> 
+               </a>
+            </div>
+            <div class="filter-btn">
+               <a href="javascript:void(0)" class="btn btn-danger mr-3"><i class="icon-filter"></i> Last 7 Days</a>  
+               <a href="javascript:void(0)" class="btn btn-danger"><i class="icon-down"></i> Report</a> 
+            </div>
             <ul class="navbar-nav d-none d-sm-flex ml-auto align-items-center">
                <li class="nav-item">
                   <a class="nav-link" href="javascript:void(0)">
@@ -49,8 +56,14 @@
             <ul class="sidebar-nav">
                <li>
                   <a href="javascript:void(0)">
-                  <img class="logo" src="assets/images/logo.png" alt="logo"> 
+                  <img class="logo d-none d-md-block" src="assets/images/logo.png" alt="logo"> 
                   </a>
+               </li>
+               <li>
+                  <a href="javascript:void(0)"><i class="icon-bell"></i> Notifications</a>
+               </li>
+               <li>
+                  <a href="javascript:void(0)"><img class="avatar" src="assets/images/avatar.png" alt="avatar"> My Profile</a>
                </li>
                <li class="active">
                   <a href="javascript:void(0)"><i class="icon-dashboard"></i> Dashboard</a>
@@ -89,7 +102,7 @@
          </aside>
          <section id="content-wrapper" class="user-dashboard profile-image">
             <div class="row">
-               <div class="col-md-4">
+               <div class="col-md-12 col-xl-4 mb-3">
                   <div class="card funnel-block h-100">
                      <div class="card-body">
                         <h4>Funnel Vision</h4>
@@ -156,14 +169,17 @@
                      </div>
                   </div>
                </div>
-               <div class="col-md-8 pl-lg-1">
+               <div class="col-md-12 col-xl-8 pl-xl-1">
                   <div class="card state-block">
                      <div class="card-body text-center">
                         <div class="row">
                            <div class="col-md-3 border-right">
-                              <h6 class="text-gray">Digital Marketing</h6>
+                              <div class="d-flex justify-content-between justify-content-md-center">
+                                 <h6 class="text-gray">Digital Marketing </h6>
+                                 <p class="font-bold d-md-none">CHART VIEW</p>
+                              </div>
                               <h4>Leads</h4>
-                              <div class="dots">
+                              <div class="dots d-none d-md-block">
                                  <span class="active"></span>
                                  <span></span>
                                  <span></span>
@@ -172,25 +188,26 @@
                               </div>
                            </div>
                            <div class="col-md-3 border-right">
-                              <h6>Current</h6>
-                              <h3>325</h3>
+                              <h6 class="d-none d-md-block">Current</h6>
+                              <h3 class="number">325</h3>
                               <span class="badge badge-danger">-85 of Benchmark</span> 
                               <i class="icon-arrow-down ml-1"></i>
-                              <div class="d-flex justify-content-between align-items-center px-lg-1">
+                              <div class="d-flex justify-content-between align-items-center px-4 px-lg-1">
                                  <img src="assets/images/run.png" alt="run">
                                  <span class="dashed-line"></span>
                                  <span>415 </span>
                               </div>
+                              <h6 class="text-left mt-4"><i class="icon-budget"></i> BUDGET: $4.35M</h6>
                            </div>
                            <div class="col-md-6">
-                              <img class="img-fluid" src="assets/images/graph.png" alt="graph">
+                              <img class="img-fluid d-none d-md-block" src="assets/images/graph.png" alt="graph">
                            </div>
                         </div>
                      </div>
                   </div>
                   <div class="card state-block">
-                     <div class="card-body text-center">
-                        <div class="row">
+                     <div class="card-body">
+                        <div class="row d-none d-md-flex text-center">
                            <div class="col-md-3 border-right">
                               <h6 class="text-gray">Inventory MGMT</h6>
                               <h4>Units > 60</h4>
@@ -207,7 +224,7 @@
                               <h3>35</h3>
                               <span class="badge badge-success">+5 of Benchmark</span>
                               <i class="icon-arrow-down ml-1"></i>
-                              <div class="d-flex justify-content-between align-items-center px-lg-1">
+                              <div class="d-flex justify-content-between align-items-center benchmark-block px-lg-1">
                                  <img src="assets/images/run.png" alt="run">
                                  <span class="dashed-line"></span>
                                  <span>42 </span>
@@ -217,11 +234,72 @@
                               <img class="img-fluid" src="assets/images/graph-1.png" alt="graph">
                            </div>
                         </div>
+                        <div class="row d-md-none">
+                           <div class="col-md-12">
+                              <div class="d-flex justify-content-between mb-0">
+                                 <h5>Inventory MGMT</h5>
+                                 <p class="font-bold">TEXT VIEW</p>
+                              </div>
+                              <table class="table">
+                                 <thead>
+                                    <tr>
+                                       <th>Title</th>
+                                       <th>Current</th>
+                                       <th>Previous</th>
+                                       <th>Difference</th>
+                                    </tr>
+                                 </thead>
+                                 <tbody>
+                                    <tr>
+                                       <td>New/Used</td>
+                                       <td>140</td>
+                                       <td>120</td>
+                                       <td>
+                                          <span class="badge badge-success">+ 20</span>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td>TTM</td>
+                                       <td><span class="badge badge-primary"><i class="fa fa-circle"></i> 5</span></td>
+                                       <td>10</td>
+                                       <td>
+                                          <span class="badge badge-danger">-5</span>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td>Units > 60</td>
+                                       <td>30</td>
+                                       <td>25</td>
+                                       <td>
+                                          <span class="badge badge-success">+ 5</span>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td>Turnover %</td>
+                                       <td><span class="badge badge-primary"><i class="fa fa-circle"></i> 95</span></td>
+                                       <td>70</td>
+                                       <td>
+                                          <span class="badge badge-success">+ 25</span>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td>Invent $</td>
+                                       <td>$4.0</td>
+                                       <td>$5.5</td>
+                                       <td>
+                                          <span class="badge badge-danger">- $1.5</span>
+                                       </td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                              <h6><i class="icon-budget"></i> BUDGET: $4.35M</h6>
+                           </div>
+                        </div>
                      </div>
                   </div>
                   <div class="card state-block">
-                     <div class="card-body text-center">
-                        <div class="row">
+                     <div class="card-body">
+                        <div class="row text-center d-none d-md-flex">
                            <div class="col-md-3 border-right">
                               <h6 class="text-gray">Lead Handling</h6>
                               <h4>Appoint.</h4>
@@ -238,7 +316,7 @@
                               <h3>23</h3>
                               <span class="badge badge-danger">-15 of Benchmark</span>
                               <i class="icon-arrow-down ml-1"></i>
-                              <div class="d-flex justify-content-between align-items-center px-lg-1">
+                              <div class="d-flex justify-content-between align-items-center benchmark-block px-lg-1">
                                  <img src="assets/images/run.png" alt="run">
                                  <span class="dashed-line"></span>
                                  <span>58 </span>
@@ -248,11 +326,64 @@
                               <img class="img-fluid" src="assets/images/graph-2.png" alt="graph">
                            </div>
                         </div>
+                        <div class="row d-md-none">
+                           <div class="col-md-12">
+                              <div class="d-flex justify-content-between mb-0">
+                                 <h5>Lead Handling</h5>
+                                 <p class="font-bold">TEXT VIEW</p>
+                              </div>
+                              <table class="table">
+                                 <thead>
+                                    <tr>
+                                       <th>Title</th>
+                                       <th>Current</th>
+                                       <th>Previous</th>
+                                       <th>Difference</th>
+                                    </tr>
+                                 </thead>
+                                 <tbody>
+                                    <tr>
+                                       <td>BDC leads</td>
+                                       <td>400</td>
+                                       <td>300</td>
+                                       <td>
+                                          <span class="badge badge-success">+ 100</span>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td>Appointments</td>
+                                       <td>80</td>
+                                       <td>75</td>
+                                       <td>
+                                          <span class="badge badge-success">+ 5</span>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td>Appointments shown</td>
+                                       <td><span class="badge badge-primary"><i class="fa fa-circle"></i> 12</span></td>
+                                       <td>19</td>
+                                       <td>
+                                          <span class="badge badge-danger">-7</span>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td>Appointments sold</td>
+                                       <td><span class="badge badge-primary"><i class="fa fa-circle"></i> 9</span></td>
+                                       <td>4</td>
+                                       <td>
+                                          <span class="badge badge-success">+ 5</span>
+                                       </td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                              <h6><i class="icon-budget"></i> BUDGET: $12,525</h6>
+                           </div>
+                        </div>
                      </div>
                   </div>
                   <div class="card state-block">
-                     <div class="card-body text-center">
-                        <div class="row">
+                     <div class="card-body">
+                        <div class="row text-center d-none d-md-flex">
                            <div class="col-md-3 border-right">
                               <h6 class="text-gray">Sales</h6>
                               <h4>Closing %</h4>
@@ -269,7 +400,7 @@
                               <h3>42%</h3>
                               <span class="badge badge-danger">-8% of Benchmark</span>
                               <i class="icon-arrow-down ml-1"></i>
-                              <div class="d-flex justify-content-between align-items-center px-lg-1">
+                              <div class="d-flex justify-content-between align-items-center benchmark-block px-lg-1">
                                  <img src="assets/images/run.png" alt="run">
                                  <span class="dashed-line"></span>
                                  <span>42%</span>
@@ -280,16 +411,85 @@
                               <img class="img-fluid" src="assets/images/graph.png" alt="graph">
                            </div>
                         </div>
+                        <div class="row d-md-none">
+                           <div class="col-md-12">
+                              <div class="d-flex justify-content-between mb-0">
+                                 <h5>Sales</h5>
+                                 <p class="font-bold">TEXT VIEW</p>
+                              </div>
+                              <table class="table">
+                                 <thead>
+                                    <tr>
+                                       <th>Title</th>
+                                       <th>Current</th>
+                                       <th>Previous</th>
+                                       <th>Difference</th>
+                                    </tr>
+                                 </thead>
+                                 <tbody>
+                                    <tr>
+                                       <td>BDC up/as</td>
+                                       <td><span class="badge badge-primary"><i class="fa fa-circle"></i> 80</span></td>
+                                       <td>55</td>
+                                       <td>
+                                          <span class="badge badge-success">+ 25</span>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td>Walk in Ups</td>
+                                       <td><span class="badge badge-primary"><i class="fa fa-circle"></i> 60</span></td>
+                                       <td>110</td>
+                                       <td>
+                                          <span class="badge badge-danger">+ 5</span>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td>BB ups</td>
+                                       <td><span class="badge badge-primary"><i class="fa fa-circle"></i> 12</span></td>
+                                       <td>19</td>
+                                       <td>
+                                          <span class="badge badge-danger">- 50</span>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td>Total ups</td>
+                                       <td><span class="badge badge-primary"><i class="fa fa-circle"></i> 158</span></td>
+                                       <td>115</td>
+                                       <td>
+                                          <span class="badge badge-success">+ 39</span>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td>Pencils</td>
+                                       <td>79</td>
+                                       <td>60</td>
+                                       <td>
+                                          <span class="badge badge-success">+19</span>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td>Closing %</td>
+                                       <td>.32</td>
+                                       <td>30</td>
+                                       <td>
+                                          <span class="badge badge-success">+ .095</span>
+                                       </td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                              <h6><i class="icon-budget"></i> BUDGET: $171,500</h6>
+                           </div>
+                        </div>
                      </div>
                   </div>
                </div>
             </div>
-            <div class="row mt-4">
+            <div class="row mt-md-2">
                <div class="col-md-12">
                   <div class="card state-block">
                      <div class="card-body">
-                        <div class="row">
-                           <div class="col-md-2 text-center border-right">
+                        <div class="row d-none d-md-flex">
+                           <div class="col-md-3 col-lg-3 col-xl-2 text-center border-right">
                               <h6 class="text-gray">Finance DEPT</h6>
                               <h4>Closing %</h4>
                               <div class="dots">
@@ -300,24 +500,164 @@
                                  <span></span>
                               </div>
                            </div>
-                           <div class="col-md-2 text-center">
+                           <div class="col-md-3 col-lg-3 col-xl-2 text-center">
                               <h6>Current</h6>
                               <h3>42%</h3>
                               <span class="badge badge-primary">-8% of Benchmark</span>
                               <i class="icon-arrow-down ml-1"></i>
-                              <div class="d-flex justify-content-between align-items-center px-lg-1">
+                              <div class="d-flex justify-content-between align-items-center benchmark-block px-lg-1">
                                  <img src="assets/images/run.png" alt="run">
                                  <span class="dashed-line"></span>
                                  <span>42%</span>
                               </div>
                            </div>
-                           <div class="col-md-4">
+                           <div class="col-md-3 col-lg-3 col-xl-4">
                               <i class="icon-info"></i>
                               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Libero bibendum sem viverra ut. In sit sed id suscipit maecenas ac vitae et praesent. Amet diam tellus ut purus in. </p>
                            </div>
-                           <div class="col-md-4">
+                           <div class="col-md-3 col-lg-3 col-xl-4">
                               <i class="icon-video float-right mb-1"></i>
                               <img class="img-fluid" src="assets/images/graph.png" alt="graph">
+                           </div>
+                        </div>
+                        <div class="row d-md-none">
+                           <div class="col-md-12">
+                              <div class="d-flex justify-content-between mb-0">
+                                 <h5>F&I</h5>
+                                 <p class="font-bold">TEXT VIEW</p>
+                              </div>
+                              <table class="table">
+                                 <thead>
+                                    <tr>
+                                       <th>Title</th>
+                                       <th>Current</th>
+                                       <th>Previous</th>
+                                       <th>Difference</th>
+                                    </tr>
+                                 </thead>
+                                 <tbody>
+                                    <tr>
+                                       <td>Opportunities</td>
+                                       <td>88</td>
+                                       <td>82</td>
+                                       <td>
+                                          <span class="badge badge-success">+ 6</span>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td>Cash</td>
+                                       <td><span class="badge badge-primary"><i class="fa fa-circle"></i> 5</span></td>
+                                       <td>15</td>
+                                       <td>
+                                          <span class="badge badge-danger">- 10</span>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td>Finance</td>
+                                       <td>83</td>
+                                       <td>67</td>
+                                       <td>
+                                          <span class="badge badge-success">+ 16</span>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td>Lease</td>
+                                       <td>0</td>
+                                       <td>0</td>
+                                       <td>0</td>
+                                    </tr>
+                                    <tr>
+                                       <td>Penetrations
+                                          %
+                                       </td>
+                                       <td><span class="badge badge-primary"><i class="fa fa-circle"></i> 60</span></td>
+                                       <td>40</td>
+                                       <td>
+                                          <span class="badge badge-success">+ 67</span>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td>Average BE $</td>
+                                       <td><span class="badge badge-primary">$2,500</span></td>
+                                       <td>$1,500</td>
+                                       <td>
+                                          <span class="badge badge-success"> +$1,000</span>
+                                       </td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                              <h6><i class="icon-budget"></i> BUDGET: $36,800</h6>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="card state-block d-md-none">
+                     <div class="card-body">
+                        <div class="row">
+                           <div class="col-md-12">
+                              <div class="d-flex justify-content-between mb-0">
+                                 <h5>Sales Chain</h5>
+                                 <p class="font-bold">TEXT VIEW</p>
+                              </div>
+                              <table class="table">
+                                 <thead>
+                                    <tr>
+                                       <th>Title</th>
+                                       <th>Current</th>
+                                       <th>Previous</th>
+                                       <th>Difference</th>
+                                    </tr>
+                                 </thead>
+                                 <tbody>
+                                    <tr>
+                                       <td>Users/visits</td>
+                                       <td>88</td>
+                                       <td>82</td>
+                                       <td>
+                                          <span class="badge badge-success">+ 6</span>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td>VDPs</td>
+                                       <td><span class="badge badge-primary"><i class="fa fa-circle"></i> 5</span></td>
+                                       <td>15</td>
+                                       <td>
+                                          <span class="badge badge-success">+ 10</span>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td>Leads/HC</td>
+                                       <td>83</td>
+                                       <td>67</td>
+                                       <td>
+                                          <span class="badge badge-success">+ 16</span>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td>Appointments</td>
+                                       <td>60</td>
+                                       <td>60</td>
+                                       <td>0</td>
+                                    </tr>
+                                    <tr>
+                                       <td>Penetrations
+                                          %
+                                       </td>
+                                       <td>0</td>
+                                       <td>0</td>
+                                       <td>0</td>
+                                    </tr>
+                                    <tr>
+                                       <td>Average BE $</td>
+                                       <td><span class="badge badge-primary">$2,500</span></td>
+                                       <td>$1,500</td>
+                                       <td>
+                                          <span class="badge badge-success"> +$1,000</span>
+                                       </td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                              <h6><i class="icon-budget"></i> TOTAL BUDGET: $4.62M</h6>
                            </div>
                         </div>
                      </div>
@@ -326,23 +666,26 @@
             </div>
          </section>
       </div>
+
       <!-- jQuery first, then Popper.js, then Bootstrap JS -->
       <script src="assets/js/jquery.min.js"></script>
       <script src="assets/js/bootstrap.min.js"></script>
+
+      
       <script>
          const $button  = document.querySelector('#sidebar-toggle');
          const $wrapper = document.querySelector('#wrapper');
          
          $button.addEventListener('click', (e) => {
-           e.preventDefault();
-           $wrapper.classList.toggle('toggled');
+          e.preventDefault();
+          $wrapper.classList.toggle('toggled');
          });
       </script>
       <script>
          $(document).ready(function(){
-           $("#close").click(function(){
-             $("#wrapper").removeClass('toggled');
-           });
+          $("#close").click(function(){
+           $("#wrapper").removeClass('toggled');
+         });
          });
       </script>
    </body>
