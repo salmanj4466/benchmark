@@ -627,6 +627,21 @@ header .navbar-nav .nav-item {
   margin-right: 3px;
 }
 
+.owl-dots button.owl-dot.active {
+    background-color: #3D63E4;
+    width: 10px;
+    height: 10px;
+}
+
+.owl-dots button.owl-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    background: #DCE0E8;
+    margin: 0 3px;
+}
+
 /* Media Query */
 
 
